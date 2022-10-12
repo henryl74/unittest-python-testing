@@ -1,7 +1,9 @@
 from datetime import date, timedelta
 
+
 class Student:
     """ A Student class as a basis for method testing """
+
     def __init__(self, first_name, last_name):
         self._first_name  = first_name
         self._last_name = last_name
@@ -19,3 +21,6 @@ class Student:
         
     def alert_santa(self):
         self.naughty_list = True
+
+    def apply_extension(self, days):
+        self.end_date = self.end_date + timedelta(days=days)
